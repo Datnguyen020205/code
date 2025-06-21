@@ -31386,3 +31386,92 @@ table.dataTable tbody tr > .dtfc-fixed-start, table.dataTable tbody tr > .dtfc-f
 }
 
 
+/* Custom menu redesign */
+:root {
+  --pc-menu-bg: #262626;
+  --pc-menu-hover-bg: #333;
+  --pc-menu-active-bg: #444;
+  --pc-menu-color: #e0e0e0;
+  --pc-menu-active-color: #ff9800;
+}
+
+.navbar,
+.pc-sidebar {
+  background-color: var(--pc-menu-bg);
+  color: var(--pc-menu-color);
+}
+
+.navbar .nav-link,
+.pc-sidebar .pc-link {
+  color: var(--pc-menu-color);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+.pc-sidebar .pc-item.active > .pc-link,
+.pc-sidebar .pc-link:hover {
+  background-color: var(--pc-menu-hover-bg);
+  color: var(--pc-menu-active-color);
+}
+
+.dropdown-menu {
+  background-color: var(--pc-menu-bg);
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--pc-menu-color);
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item.active {
+  background-color: var(--pc-menu-active-bg);
+  color: var(--pc-menu-active-color);
+}
+
+/* Spaced and rounded menu */
+.pc-sidebar {
+  margin-left: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.navbar {
+  margin-left: 1rem;
+  border-radius: 8px;
+}
+
+/* Align icons and text nicely */
+.navbar .nav-link,
+.pc-sidebar .pc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar .nav-link i,
+.pc-sidebar .pc-link i {
+  font-size: 1rem;
+}
+
+/* Compact 60% menu size */
+.pc-sidebar,
+.navbar {
+  width: 60%;
+  height: 60%;
+  border-radius: 12px;
+  overflow: auto;
+}
+
+.pc-sidebar {
+  bottom: auto;
+}
+
+.pc-sidebar .navbar-wrapper {
+  width: 100%;
+  height: 100%;
+}
